@@ -13,13 +13,13 @@ from sklearn.preprocessing import MinMaxScaler
 
 def model_pred(file_name, PGA, param_index=1, model_type="rf",
                data_file="../Data/intensity_measures_all/intensity_measures_cleaned-0.7.npy"):
-    # 获取模型
+
     model = joblib.load(
         "../Data/save_model/" + model_type + "_" + file_name + "-" + str(param_index) + "-" + str(PGA) + ".pkl")
     features_list = ['PGD', 'RMSA', 'I_A',
                      'VSI', 'SMA', 'SMV', 'Iv',
                      'Sv(T1)', 'T90', 'FFT']
-    # 获取反归一化的值
+
     x_data = read_intensity_data(features_list, "../Data/datasets/quakeIntensityMeasures" + str(PGA) + ".mat")
     y_data = loadmat("../Data/datasets/" + file_name + "-" + str(param_index) + "-" + str(PGA) + ".mat")["data"]
     y_data = np.transpose(y_data)
