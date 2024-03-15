@@ -1,9 +1,5 @@
 # Selection of the structural severest design ground motions based on big data and random forest
 
-<p align="center">
- <img src="https://img.shields.io/github/license/cyling250/SSDGM"/>
-</p>
-
 ## 1 How to get the STanford EArthquake Dataset - ACC
 
 ### 1.1 Go to https://github.com/smousavi05/STEAD and Download the dataset of meta data.
@@ -264,3 +260,4 @@ doi = {https://doi.org/10.1016/j.engappai.2024.108238}
 }
 ```
 -----------------------------------------
+## [LICENSE-MIT](LICENSE)
