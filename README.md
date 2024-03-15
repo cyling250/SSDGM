@@ -1,7 +1,9 @@
-# SSDGM
+# Selection of the structural severest design ground motions based on big data and random forest
+
 <p align="center">
  <img src="https://img.shields.io/github/license/cyling250/SSDGM"/>
 </p>
+
 ## 1 How to get the STanford EArthquake Dataset - ACC
 
 ### 1.1 Go to https://github.com/smousavi05/STEAD and Download the dataset of meta data.
@@ -172,13 +174,9 @@ if __name__ == "__main__":
 3) After applying to get the acc data, some of the seismic wave data were lost, in this study, the statistics of the
    original data and the obtained ACC data are as follows.
 
-![map](earthmap.png)
+![map](STEAD-ACC.png)
 
-![map](depth_fig.png)
-
-![map](epicentre_fig.png)
-
-## 1.3 Acc to Intensity Measures
+### 1.3 Acc to Intensity Measures
 
 In addition, we provide some seismic wave processing functions to facilitate the extraction of seismic
 *_Intensity Measures_* data
@@ -232,11 +230,9 @@ The two opensees Model used in this research is as follows:
 
 1) [Bridge](openseesModels/Bridge/eaii.tcl)
 
-![map](Bridge.png)
-
 2) [Building](openseesModels/Building/EXAM7.tcl)
 
-![map](Bridge.png)
+![map](FEM.png)
 
 ## 3. Machine learning Models
 
@@ -246,3 +242,25 @@ seismic intensity prediction under big data by machine learning method is stored
 in [mlStaticTargetPredBridge](mlStaticTargetPredBridge) and [mlStaticTargetPredBuilding](mlStaticTargetPredBuilding).
 We provide the relevant [data](mlStaticTargetPredBuilding/Data) files and [code](mlStaticTargetPredBridge/Data) files
 used in this study.
+
+----------------------------------------- 
+Reference:
+```commandline
+Xiaohong Long, Chunde Lu, Xiaopeng Gu, Yongtao Ma, Zonglin Li,
+Selection of the structural severest design ground motions based on big data and random forest,
+Engineering Applications of Artificial Intelligence,
+Volume 133, Part B,2024,108238,https://doi.org/10.1016/j.engappai.2024.108238.
+```
+BibTex:
+```BibTex
+@article{LONG2024108238,
+title = {Selection of the structural severest design ground motions based on big data and random forest},
+journal = {Engineering Applications of Artificial Intelligence},
+volume = {133},
+pages = {108238},
+year = {2024},
+issn = {0952-1976},
+doi = {https://doi.org/10.1016/j.engappai.2024.108238}
+}
+```
+-----------------------------------------
